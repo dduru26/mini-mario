@@ -2749,6 +2749,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114433360892764894, guid: 270476c86898441ebba04a1780996bd5, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3190,6 +3194,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1164657389588632, guid: deb81019505174616922fb5b092e2611, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264118971929910, guid: deb81019505174616922fb5b092e2611, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644014412651594, guid: deb81019505174616922fb5b092e2611, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787317314799840, guid: deb81019505174616922fb5b092e2611, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1997495232899738, guid: deb81019505174616922fb5b092e2611, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3225,6 +3245,10 @@ PrefabInstance:
     - target: {fileID: 4250916752214804, guid: deb81019505174616922fb5b092e2611, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754893130265698, guid: deb81019505174616922fb5b092e2611, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4720,6 +4744,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1036737617951046, guid: be3eb85ab377e4b95bc8eeeb166f1b7a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266839362122108, guid: be3eb85ab377e4b95bc8eeeb166f1b7a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318509641614190, guid: be3eb85ab377e4b95bc8eeeb166f1b7a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739889243990534, guid: be3eb85ab377e4b95bc8eeeb166f1b7a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1999365931216454, guid: be3eb85ab377e4b95bc8eeeb166f1b7a, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4755,6 +4795,10 @@ PrefabInstance:
     - target: {fileID: 4101985624137796, guid: be3eb85ab377e4b95bc8eeeb166f1b7a, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114917210804837380, guid: be3eb85ab377e4b95bc8eeeb166f1b7a, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10089,7 +10133,7 @@ MonoBehaviour:
   m_margin: {x: -110.57057, y: 0, z: -102.88391, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &593834799
@@ -17096,6 +17140,10 @@ PrefabInstance:
     - target: {fileID: 4366726488908972, guid: 537ea5de6e5ba4d2f9b548c708673b73, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896626206527372, guid: 537ea5de6e5ba4d2f9b548c708673b73, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33388,6 +33436,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1499371143478176, guid: faaef2337c68447b79977529f4878950, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825756964667102, guid: faaef2337c68447b79977529f4878950, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4038629572465822, guid: faaef2337c68447b79977529f4878950, type: 3}
       propertyPath: m_RootOrder
       value: 1

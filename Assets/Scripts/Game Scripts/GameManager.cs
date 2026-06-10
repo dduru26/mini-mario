@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager Instance;
 
-    [SerializeField] private GameObject endPanel;   // the Game Over UI, hidden by default
+    [SerializeField] private GameObject endPanel;
 
     private Text lifeText;
     private int lifeCount = 3;
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
         UpdateLifeUI();
 
         if (endPanel != null) {
-            endPanel.SetActive(false);   // make sure it's hidden at the start
+            endPanel.SetActive(false);
         }
 
         GameObject player = GameObject.FindWithTag("Player");
@@ -48,17 +48,20 @@ public class GameManager : MonoBehaviour {
         lastSafePosition = pos;
     }
 
+    // shared by water and enemies: lose a life, respawn if still alive
+    public void TakeHit() {
+        LoseLife();
+        if (GetLife() > 0) {
+            Respawn();
+        }
+        // end screen on zero is handled inside LoseLife
+    }
+
     public void PlayerEnteredWater(Vector3 playerPosition) {
         if (processingWater) return;
         processingWater = true;
 
-        LoseLife();
-
-        if (GetLife() > 0) {
-            Respawn();
-        } else {
-            ShowEndScreen();
-        }
+        TakeHit();
 
         StartCoroutine(ResetWaterFlag());
     }
@@ -74,36 +77,38 @@ public class GameManager : MonoBehaviour {
         player.transform.position = respawnPos;
     }
 
+    public void LoseLife() {
+        lifeCount--;
+        if (lifeCount < 0) lifeCount = 0;
+        UpdateLifeUI();
+
+        if (lifeCount <= 0) {
+            ShowEndScreen();
+        }
+    }
+
     void ShowEndScreen() {
         if (endPanel != null) {
             endPanel.SetActive(true);
         }
-        Time.timeScale = 0f;   // freeze the game behind the panel
+        Time.timeScale = 0f;
     }
 
-    // hooked to the Replay button
     public void Replay() {
-        Time.timeScale = 1f;   // unfreeze before reloading
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // hooked to the Quit button
     public void Quit() {
         Application.Quit();
         #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;   // also stops Play mode in the editor
+        UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
 
     IEnumerator ResetWaterFlag() {
         yield return new WaitForSeconds(0.5f);
         processingWater = false;
-    }
-
-    public void LoseLife() {
-        lifeCount--;
-        if (lifeCount < 0) lifeCount = 0;
-        UpdateLifeUI();
     }
 
     void UpdateLifeUI() {
