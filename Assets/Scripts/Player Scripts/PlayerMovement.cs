@@ -70,12 +70,14 @@ public class PlayerMovement : MonoBehaviour {
     	isGrounded = Physics2D.Raycast (groundCheckPosition.position, Vector2.down, 0.1f, groundLayer);
 
     	if (isGrounded) {
-        	// and we jumped before
-        	if (jumped) {
+				if (GameManager.Instance != null) {
+				GameManager.Instance.SetCheckpoint(transform.position);   // remember last safe ground
+        }
 
-            	jumped = false;
-
-            	anim.SetBool ("Jump", false);
+        // and we jumped before
+        if (jumped) {
+            jumped = false;
+            anim.SetBool ("Jump", false);
         }
     }
 }
